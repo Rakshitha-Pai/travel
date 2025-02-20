@@ -1,0 +1,24 @@
+/* src/styles/Navbar.css */
+.navbar {
+    background-color: #007bff;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin: 10px 0;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  

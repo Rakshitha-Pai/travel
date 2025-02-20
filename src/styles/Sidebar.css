@@ -1,0 +1,50 @@
+/* src/styles/Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 220px;
+  height: 100%;
+  background: #ef4339;
+  color: #fff;
+  transition: left 0.3s ease;
+  padding-top: 80px;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  background: #ef4339;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.2s;
+}
+
+.sidebar nav a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}

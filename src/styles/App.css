@@ -1,0 +1,63 @@
+/* src/styles/App.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling if content is wider than screen */
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    min-height: 100vh;
+    padding-top: 60px; /* space for top header or similar */
+  }
+  
+  /* When viewport >= 768px, shift main content to accommodate sidebar */
+  @media (min-width: 768px) {
+    .main-content {
+      margin-left: 220px; /* width of your sidebar */
+    }
+  }
+  
+  /* Header Container */
+  .header-container {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Flex container to center logo and text horizontally */
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Logo styling */
+  .logo {
+    width: 60px;      /* Adjust as needed */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  /* Site Name styling */
+  .site-name {
+    font-size: 2rem;
+    color: #ef4339;
+    font-weight: bold;
+    margin: 0;
+  }
+  
