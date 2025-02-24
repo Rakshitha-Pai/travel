@@ -1,5 +1,6 @@
+// src/pages/Home.js
 import React from "react";
-import { useNavigate } from "react-router-dom";  // Import hook for navigation
+import { useNavigate } from "react-router-dom";
 import "../styles/App.css";
 
 const Home = () => {
@@ -7,7 +8,7 @@ const Home = () => {
 
   const heroStyle = {
     background: 'url("/images/right_travel.png") center center no-repeat',
-    backgroundSize: "contain", // or "cover"
+    backgroundSize: "contain",
     height: "80vh",
     display: "flex",
     alignItems: "center",
@@ -23,9 +24,13 @@ const Home = () => {
     borderRadius: "8px",
   };
 
-  // When "Get Started" is clicked, navigate to /user
   const handleGetStarted = () => {
     navigate("/user");
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("adminLoggedIn");
+    navigate("/admin-login");
   };
 
   return (
@@ -36,6 +41,9 @@ const Home = () => {
           <img src="/images/logo.jpg" alt="Travel Logo" className="logo" />
           <h1 className="site-name">Avenue Travellers</h1>
         </div>
+        <button className="logout-btn" onClick={handleLogout}>
+          Logout
+        </button>
       </header>
 
       {/* Hero Section */}
